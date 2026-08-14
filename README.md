@@ -100,3 +100,26 @@ GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で45�
 生成ルール、配色、ファイル命名規則、100種類以上へ拡張するときの追加手順は [`docs/BADGE_PROMPTS.md`](docs/BADGE_PROMPTS.md) にまとめています。
 
 追加時は、既存slugを変更せず、`assets/badges/common/<new-slug>/badge.png` を追加してください。文字・数字を画像に入れず、獲得条件や日本語名は利用アプリ側または一覧データ側で管理します。
+
+
+## Math / 算数
+
+`assets/badges/math/` contains 15 reusable badges for mathematics learning across number sense, calculation, relationships, patterns, geometry, measurement, visualization, reasoning, and solution strategies. Each badge is a transparent 512×512 PNG.
+
+| File | 日本語名 | テーマ | 主な意味 | 獲得条件の例 | Preview |
+|---|---|---|---|---|---|
+| `number-sense/badge.png` | 数となかよし | 数・数量感覚 | 数の大きさやまとまりをとらえた | 数ブロックや数量のまとまりを説明できた | ![number-sense](assets/badges/math/number-sense/badge.png) |
+| `calculation/badge.png` | 計算マスター | 計算 | 計算する力を高めた | 計算方法を使い分けて問題を解いた | ![calculation](assets/badges/math/calculation/badge.png) |
+| `mental-math/badge.png` | 頭の中で！ | 暗算・数の操作 | 頭の中で数を動かして考えた | 数を分けたりまとめたりして暗算できた | ![mental-math](assets/badges/math/mental-math/badge.png) |
+| `number-line/badge.png` | 数の道 | 数直線・順序・大小 | 数の順序、大きさ、位置関係をとらえた | 数直線や数の位置を使って比べた | ![number-line](assets/badges/math/number-line/badge.png) |
+| `relationship/badge.png` | 関係発見！ | 数量関係 | 数や量、図形の関係を見つけた | 変化や対応の関係を説明できた | ![relationship](assets/badges/math/relationship/badge.png) |
+| `pattern/badge.png` | きまり発見！ | 規則性 | 並びから規則やきまりを見つけた | 数や図形のきまりを見つけて続けた | ![pattern](assets/badges/math/pattern/badge.png) |
+| `geometry/badge.png` | 図形マスター | 図形 | 図形の特徴や性質をとらえた | 図形の共通点や違いを説明できた | ![geometry](assets/badges/math/geometry/badge.png) |
+| `spatial-sense/badge.png` | 空間マスター | 立体・空間認識 | 立体の形や位置関係をイメージした | 立体を回したり組み立てたりして考えた | ![spatial-sense](assets/badges/math/spatial-sense/badge.png) |
+| `measurement/badge.png` | はかる名人 | 測定 | 量を比べたり測ったりする考え方を身につけた | 目的に合う道具や単位を選んだ | ![measurement](assets/badges/math/measurement/badge.png) |
+| `fraction-sense/badge.png` | わける・まとめる | 分割・割合的な見方 | 部分と全体の関係を考えた | 等分、割合、比を図や言葉で表した | ![fraction-sense](assets/badges/math/fraction-sense/badge.png) |
+| `visualize/badge.png` | 図にしてみよう | 図・モデル化 | 問題の内容を図に表して考えた | テープ図や線分図、表に整理した | ![visualize](assets/badges/math/visualize/badge.png) |
+| `logical-thinking/badge.png` | すじみち思考 | 論理・筋道 | 理由や順序を考えて答えにたどり着いた | 考え方を順序立てて説明できた | ![logical-thinking](assets/badges/math/logical-thinking/badge.png) |
+| `strategy/badge.png` | 作戦名人 | 解き方・見通し | 解き方の見通しをもって取り組んだ | 解く前に方法や手順を選んだ | ![strategy](assets/badges/math/strategy/badge.png) |
+| `another-way/badge.png` | 別の解き方！ | 多様な解法 | 同じ問題の別の考え方や解き方を見つけた | 2通り以上の方法で答えを求めた | ![another-way](assets/badges/math/another-way/badge.png) |
+| `math-discovery/badge.png` | 算数のひみつ | 算数を楽しむ・発見 | 算数の仕組みや面白さを発見した | 学習したことから新しいきまりや疑問を見つけた | ![math-discovery](assets/badges/math/math-discovery/badge.png) |

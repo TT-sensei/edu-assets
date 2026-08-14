@@ -2,6 +2,10 @@
 
 小学生向けWeb教材で共通利用する画像アセット集です。
 
+## Badge catalog
+
+GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で30種類のバッジをカテゴリー別に確認できます。検索、画像プレビュー、画像URLのコピーにも対応しています。
+
 ## Common Badges
 
 `assets/badges/common/` contains reusable achievement badges that are independent of subject area. Each badge is a transparent 512×512 PNG. Use the stable path below from GitHub Pages:

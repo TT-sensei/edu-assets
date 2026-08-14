@@ -4,7 +4,7 @@
 
 ## Badge catalog
 
-GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で30種類のバッジをカテゴリー別に確認できます。検索、画像プレビュー、画像URLのコピーにも対応しています。
+GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で45種類のバッジをカテゴリー別に確認できます。検索、画像プレビュー、画像URLのコピーにも対応しています。
 
 ## Common Badges
 
@@ -44,6 +44,21 @@ GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で30�
 | `knowledge/badge.png` | 知識の本 | 必要な知識を身につけた | ![knowledge](assets/badges/common/knowledge/badge.png) |
 | `treasure/badge.png` | トレジャー | 特別な成果を見つけた | ![treasure](assets/badges/common/treasure/badge.png) |
 | `special/badge.png` | スペシャル | レアな特別実績を達成した | ![special](assets/badges/common/special/badge.png) |
+| `try-again/badge.png` | もういちど！ | 間違えたあと、あきらめずに再挑戦した | ![try-again](assets/badges/common/try-again/badge.png) |
+| `breakthrough/badge.png` | にがて突破 | 苦手だった問題や課題を克服した | ![breakthrough](assets/badges/common/breakthrough/badge.png) |
+| `review-master/badge.png` | ふくしゅう名人 | 以前学習した内容を復習した | ![review-master](assets/badges/common/review-master/badge.png) |
+| `practice-master/badge.png` | れんしゅう名人 | 同じ技能や問題に繰り返し取り組んだ | ![practice-master](assets/badges/common/practice-master/badge.png) |
+| `deep-thinker/badge.png` | じっくり思考 | すぐに答えを出さず、じっくり考えた | ![deep-thinker](assets/badges/common/deep-thinker/badge.png) |
+| `problem-solver/badge.png` | かいけつ名人 | 自分で解決方法を見つけた | ![problem-solver](assets/badges/common/problem-solver/badge.png) |
+| `observer/badge.png` | かんさつ名人 | 細かなところまでよく見て、違いや特徴を見つけた | ![observer](assets/badges/common/observer/badge.png) |
+| `connection/badge.png` | つながった！ | 別々に学んだこと同士の関係やつながりに気づいた | ![connection](assets/badges/common/connection/badge.png) |
+| `creative/badge.png` | ひらめき名人 | 自分なりの方法や工夫を考えた | ![creative](assets/badges/common/creative/badge.png) |
+| `independent/badge.png` | じぶんでできた | ヒントなどに頼らず、自分の力でやり遂げた | ![independent](assets/badges/common/independent/badge.png) |
+| `explainer/badge.png` | せつめい名人 | 答えだけでなく、理由や自分の考えを説明できた | ![explainer](assets/badges/common/explainer/badge.png) |
+| `teamwork/badge.png` | きょうりょく名人 | 仲間と協力して取り組んだ | ![teamwork](assets/badges/common/teamwork/badge.png) |
+| `helper/badge.png` | おたすけ名人 | 困っている仲間を助けたり、学習を支えたりした | ![helper](assets/badges/common/helper/badge.png) |
+| `curiosity/badge.png` | なぜ？を大切に | 「どうしてだろう」「もっと知りたい」という疑問をもって学習した | ![curiosity](assets/badges/common/curiosity/badge.png) |
+| `hidden-badge/badge.png` | ひみつのバッジ | 特殊条件を満たして隠し実績を達成した | ![hidden-badge](assets/badges/common/hidden-badge/badge.png) |
 
 ## Usage
 
@@ -57,6 +72,28 @@ GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で30�
 ```
 
 各アプリ側では、獲得条件と表示名だけをアプリの学習設計に合わせて設定してください。画像ファイルは教科に依存しないため、理科・算数・国語・社会などで同じバッジを利用できます。
+
+## Japanese / 国語
+
+`assets/badges/japanese/` contains reusable badges for Japanese-language learning across reading, writing, vocabulary, comprehension, oral reading, expression, imagination, and communication. Each badge is a transparent 512×512 PNG.
+
+| File | 日本語名 | 主な意味・獲得条件の例 | Preview |
+|---|---|---|---|
+| `manuscript/badge.png` | ますめマスター | 自分の考えを文章としてしっかり書いた | ![manuscript](assets/badges/japanese/manuscript/badge.png) |
+| `bookmark/badge.png` | 読みすすめた！ | 文章や本を最後まで、または一定量しっかり読み進めた | ![bookmark](assets/badges/japanese/bookmark/badge.png) |
+| `careful-writing/badge.png` | ていねい文字 | 文字を丁寧に書いた | ![careful-writing](assets/badges/japanese/careful-writing/badge.png) |
+| `self-correction/badge.png` | 見直し名人 | 自分で読み返し、間違いや改善点を直した | ![self-correction](assets/badges/japanese/self-correction/badge.png) |
+| `expression/badge.png` | 表現名人 | 自分らしい言葉や表現を使えた | ![expression](assets/badges/japanese/expression/badge.png) |
+| `word-sprout/badge.png` | ことのはの芽 | 新しい言葉を知り、語彙が一つ増えた | ![word-sprout](assets/badges/japanese/word-sprout/badge.png) |
+| `word-tree/badge.png` | ことのはの樹 | たくさんの言葉を身につけ、使える言葉が増えた | ![word-tree](assets/badges/japanese/word-tree/badge.png) |
+| `word-weaver/badge.png` | ことばの紡ぎ手 | 言葉や文をつなぎ、まとまりのある文章を作った | ![word-weaver](assets/badges/japanese/word-weaver/badge.png) |
+| `between-the-lines/badge.png` | 行間を読む | 文章に直接書かれていない気持ちや状況まで想像して読んだ | ![between-the-lines](assets/badges/japanese/between-the-lines/badge.png) |
+| `word-detective/badge.png` | ことば探偵 | 文章の細かな表現や重要な手がかりに気づいた | ![word-detective](assets/badges/japanese/word-detective/badge.png) |
+| `reading-aloud/badge.png` | 音読マスター | 声に出して文章をしっかり読んだ | ![reading-aloud](assets/badges/japanese/reading-aloud/badge.png) |
+| `language-rhythm/badge.png` | ことばの響き | 言葉の響きやリズムを味わった | ![language-rhythm](assets/badges/japanese/language-rhythm/badge.png) |
+| `book-lover/badge.png` | 本となかよし | 本や文章を楽しんで読んだ | ![book-lover](assets/badges/japanese/book-lover/badge.png) |
+| `language-explorer/badge.png` | 日本語たんけん | 言葉の意味や文の仕組みを自分から調べた | ![language-explorer](assets/badges/japanese/language-explorer/badge.png) |
+| `words-connect/badge.png` | ことばの架け橋 | 考えや気持ちを言葉を使って相手に伝えた | ![words-connect](assets/badges/japanese/words-connect/badge.png) |
 
 ## Design and extension guide
 

@@ -146,3 +146,26 @@ GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で45�
 | `energy/badge.png` | エネルギー発見 | 物理・エネルギー | 電気、磁石、力、光、音などの現象を調べた | 現象の変化や働きを実験して説明した | ![energy](assets/badges/science/energy/badge.png) |
 | `science-connection/badge.png` | しくみがつながった！ | 関係・因果 | 自然の関係や仕組みを見つけた | 条件と結果のつながりを説明した | ![science-connection](assets/badges/science/science-connection/badge.png) |
 | `science-discovery/badge.png` | 科学のひみつ | 理科を楽しむ・発見 | 自然や科学の面白さを発見した | 学んだことから新しい発見や疑問を見つけた | ![science-discovery](assets/badges/science/science-discovery/badge.png) |
+
+
+## Social Studies / 社会
+
+`assets/badges/social/` contains 15 reusable badges for social-studies learning across maps, local communities, source reading, comparison, history, people, life and culture, industry, civic systems, citizenship, global connections, investigation, and discovery. Each badge is a transparent 512×512 PNG.
+
+| File | 日本語名 | テーマ | 意味 | 獲得条件の例 | Preview |
+|---|---|---|---|---|---|
+| `map-reader/badge.png` | 地図マスター | 地図 | 地図から位置や広がり、場所の特徴を読み取った | 地図を使って場所や地域の特徴を説明した | ![map-reader](assets/badges/social/map-reader/badge.png) |
+| `local-explorer/badge.png` | まち探検 | 地域 | 身近な地域やまちの様子について調べた | 地域の施設、土地利用、交通などを調べてまとめた | ![local-explorer](assets/badges/social/local-explorer/badge.png) |
+| `source-reader/badge.png` | 資料読み取り | 資料活用 | 地図、グラフ、写真、表などの資料から情報を見つけた | 複数の資料から必要な情報を見つけ、根拠を示した | ![source-reader](assets/badges/social/source-reader/badge.png) |
+| `compare-society/badge.png` | くらべて発見 | 比較 | 地域、時代、暮らしなどを比べ、共通点や違いを見つけた | 二つの地域や時代を比べて共通点と違いを説明した | ![compare-society](assets/badges/social/compare-society/badge.png) |
+| `timeline/badge.png` | 時の流れ | 時間・歴史 | 出来事を時間の順序でとらえた | 出来事や社会の変化を順序に沿って整理した | ![timeline](assets/badges/social/timeline/badge.png) |
+| `history-connection/badge.png` | 歴史がつながった！ | 歴史的因果・関連 | 歴史上の出来事同士の関係や変化を見つけた | 出来事のつながりや変化の理由を説明した | ![history-connection](assets/badges/social/history-connection/badge.png) |
+| `people-of-history/badge.png` | 人物探究 | 歴史人物 | 歴史上の人物が何を考え、何をしたのか調べた | 人物の働きや考えを資料から調べて説明した | ![people-of-history](assets/badges/social/people-of-history/badge.png) |
+| `life-and-culture/badge.png` | くらし発見 | 生活・文化 | 地域や時代による人々の暮らしや文化について学んだ | 衣食住や行事などの特色を調べ、暮らしと結び付けた | ![life-and-culture](assets/badges/social/life-and-culture/badge.png) |
+| `industry/badge.png` | 産業マスター | 産業 | 農業、水産業、工業、流通など、人々の仕事や産業の仕組みを学んだ | 産業の工夫や人・物の流れを資料から説明した | ![industry](assets/badges/social/industry/badge.png) |
+| `society-connection/badge.png` | 社会はつながる | 社会のつながり | 人、物、情報、地域などが互いにつながって社会をつくっていることに気づいた | 地域や産業のつながりを図や言葉で表した | ![society-connection](assets/badges/social/society-connection/badge.png) |
+| `government/badge.png` | 政治のしくみ | 政治・行政 | 政治や行政がどのような仕組みで社会を支えているか考えた | 公共施設や制度の役割を人々の暮らしと結び付けた | ![government](assets/badges/social/government/badge.png) |
+| `citizens/badge.png` | みんなの社会 | 市民・公共 | 社会はさまざまな立場の人々によって成り立っていることを考えた | 異なる立場の人々の願いや役割を考えて説明した | ![citizens](assets/badges/social/citizens/badge.png) |
+| `world-connection/badge.png` | 世界とつながる | 国際理解 | 日本と世界の国々とのつながりを学んだ | 貿易、交流、協力などのつながりを資料から説明した | ![world-connection](assets/badges/social/world-connection/badge.png) |
+| `social-investigator/badge.png` | 社会科探偵 | 調査・探究 | 複数の資料や情報を集め、自分で社会の疑問を調べた | 問いを立て、資料を集めて考えをまとめた | ![social-investigator](assets/badges/social/social-investigator/badge.png) |
+| `social-discovery/badge.png` | 社会のひみつ | 社会科を楽しむ・発見 | 人々、地域、歴史、社会の仕組みのおもしろさを発見した | 調べたことから新しい気づきや問いを見つけた | ![social-discovery](assets/badges/social/social-discovery/badge.png) |

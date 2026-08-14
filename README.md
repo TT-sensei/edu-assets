@@ -123,3 +123,26 @@ GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で45�
 | `strategy/badge.png` | 作戦名人 | 解き方・見通し | 解き方の見通しをもって取り組んだ | 解く前に方法や手順を選んだ | ![strategy](assets/badges/math/strategy/badge.png) |
 | `another-way/badge.png` | 別の解き方！ | 多様な解法 | 同じ問題の別の考え方や解き方を見つけた | 2通り以上の方法で答えを求めた | ![another-way](assets/badges/math/another-way/badge.png) |
 | `math-discovery/badge.png` | 算数のひみつ | 算数を楽しむ・発見 | 算数の仕組みや面白さを発見した | 学習したことから新しいきまりや疑問を見つけた | ![math-discovery](assets/badges/math/math-discovery/badge.png) |
+
+
+## Science / 理科
+
+`assets/badges/science/` contains 15 reusable badges for science learning across observation, questioning, prediction, experimentation, fair testing, measurement, recording, comparison, evidence-based reasoning, life science, earth science, matter, energy, connections, and discovery. Each badge is a transparent 512×512 PNG.
+
+| File | 日本語名 | テーマ | 意味 | 獲得条件の例 | Preview |
+|---|---|---|---|---|---|
+| `science-observer/badge.png` | かんさつ博士 | 観察 | 対象をよく観察し、特徴や変化を見つけた | 観察対象の特徴や変化を具体的に見つけた | ![science-observer](assets/badges/science/science-observer/badge.png) |
+| `wonder/badge.png` | ふしぎ発見 | 問題発見 | 自然現象を見て疑問をもった | 「なぜだろう」と思ったことを問いにした | ![wonder](assets/badges/science/wonder/badge.png) |
+| `prediction/badge.png` | 予想名人 | 予想 | 経験や知識をもとに結果を予想した | 実験前に結果と理由を予想した | ![prediction](assets/badges/science/prediction/badge.png) |
+| `experiment/badge.png` | 実験マスター | 実験 | 実験を行って確かめた | 安全に器具を使い、実験を最後まで行った | ![experiment](assets/badges/science/experiment/badge.png) |
+| `fair-test/badge.png` | 条件マスター | 条件制御 | 変える条件とそろえる条件を考えた | 条件をそろえて公平に比較する実験を設計した | ![fair-test](assets/badges/science/fair-test/badge.png) |
+| `science-measure/badge.png` | 測定マスター | 測定 | 温度、時間、長さ、重さなどを測って調べた | 目的に合う器具と単位を選んで測定した | ![science-measure](assets/badges/science/science-measure/badge.png) |
+| `science-record/badge.png` | 記録名人 | 記録 | 観察や実験の結果を正確に記録した | 結果を図、表、数値などで記録した | ![science-record](assets/badges/science/science-record/badge.png) |
+| `compare-results/badge.png` | くらべて発見 | 比較 | 結果を比べ、共通点や違いを見つけた | 複数の結果を比べて共通点や違いを説明した | ![compare-results](assets/badges/science/compare-results/badge.png) |
+| `evidence/badge.png` | 結果から考える | 考察 | 観察・実験の結果を根拠に考えた | 結果を根拠に予想を確かめ、考えを説明した | ![evidence](assets/badges/science/evidence/badge.png) |
+| `life-science/badge.png` | 生命のひみつ | 生命・生物 | 植物、動物、人の体など生命の仕組みを学んだ | 生き物の成長や体の仕組みを観察・説明した | ![life-science](assets/badges/science/life-science/badge.png) |
+| `earth-science/badge.png` | 地球のひみつ | 地球・天気・宇宙 | 天気、土地、流水、地球、月や太陽について学んだ | 地球や空の変化・仕組みを観察して説明した | ![earth-science](assets/badges/science/earth-science/badge.png) |
+| `matter/badge.png` | もののひみつ | 物質 | 物の性質、溶け方、状態変化を調べた | 物質の性質や変化を実験結果から説明した | ![matter](assets/badges/science/matter/badge.png) |
+| `energy/badge.png` | エネルギー発見 | 物理・エネルギー | 電気、磁石、力、光、音などの現象を調べた | 現象の変化や働きを実験して説明した | ![energy](assets/badges/science/energy/badge.png) |
+| `science-connection/badge.png` | しくみがつながった！ | 関係・因果 | 自然の関係や仕組みを見つけた | 条件と結果のつながりを説明した | ![science-connection](assets/badges/science/science-connection/badge.png) |
+| `science-discovery/badge.png` | 科学のひみつ | 理科を楽しむ・発見 | 自然や科学の面白さを発見した | 学んだことから新しい発見や疑問を見つけた | ![science-discovery](assets/badges/science/science-discovery/badge.png) |

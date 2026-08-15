@@ -53,7 +53,10 @@
     const elementBadges = [
       ['shadow/level-1','SHADOW Lv.1 SHADE','影・FOUND','謎めいた影のエレメントを発見した'],
       ['shadow/level-2','SHADOW Lv.2 PHANTOM','影・EVOLVE','影のエレメントがファントムへ進化した'],
-      ['shadow/level-3','SHADOW Lv.3 ECLIPSE SHADE','影・AWAKEN','影のエレメントがエクリプス・シェードへ覚醒した']
+      ['shadow/level-3','SHADOW Lv.3 ECLIPSE SHADE','影・AWAKEN','影のエレメントがエクリプス・シェードへ覚醒した'],
+      ['gravity/level-1','GRAVITY Lv.1 ORBIT','重力・FOUND','重力のエレメントを発見した'],
+      ['gravity/level-2','GRAVITY Lv.2 PULL','重力・EVOLVE','重力のエレメントが引力を発現した'],
+      ['gravity/level-3','GRAVITY Lv.3 SINGULARITY','重力・AWAKEN','重力のエレメントがシンギュラリティへ覚醒した']
     ];
     const collections={common:{label:'共通',root:'assets/badges/common/',badges:commonBadges},japanese:{label:'国語',root:'assets/badges/japanese/',badges:subjectBadges.japanese},math:{label:'算数',root:'assets/badges/math/',badges:subjectBadges.math},science:{label:'理科',root:'assets/badges/science/',badges:subjectBadges.science},elements:{label:'エレメント',root:'assets/elements/',badges:elementBadges}};
     let collection='common', category='すべて', badges=collections[collection].badges, root=collections[collection].root;

@@ -187,6 +187,7 @@ GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で45�
 | THUNDER / 雷 | ![THUNDER Lv.1](assets/elements/thunder/level-1/badge.png) | ![THUNDER Lv.2](assets/elements/thunder/level-2/badge.png) | ![THUNDER Lv.3](assets/elements/thunder/level-3/badge.png) |
 | ICE / 氷 | ![ICE Lv.1](assets/elements/ice/level-1/badge.png) | ![ICE Lv.2](assets/elements/ice/level-2/badge.png) | ![ICE Lv.3](assets/elements/ice/level-3/badge.png) |
 | SHADOW / 影 | ![SHADOW Lv.1](assets/elements/shadow/level-1/badge.png) | ![SHADOW Lv.2](assets/elements/shadow/level-2/badge.png) | ![SHADOW Lv.3](assets/elements/shadow/level-3/badge.png) |
+| GRAVITY / 重力 | ![GRAVITY Lv.1](assets/elements/gravity/level-1/badge.png) | ![GRAVITY Lv.2](assets/elements/gravity/level-2/badge.png) | ![GRAVITY Lv.3](assets/elements/gravity/level-3/badge.png) |
 
 ### 進化デザインルール
 

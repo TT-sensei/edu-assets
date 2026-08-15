@@ -169,3 +169,29 @@ GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で45�
 | `world-connection/badge.png` | 世界とつながる | 国際理解 | 日本と世界の国々とのつながりを学んだ | 貿易、交流、協力などのつながりを資料から説明した | ![world-connection](assets/badges/social/world-connection/badge.png) |
 | `social-investigator/badge.png` | 社会科探偵 | 調査・探究 | 複数の資料や情報を集め、自分で社会の疑問を調べた | 問いを立て、資料を集めて考えをまとめた | ![social-investigator](assets/badges/social/social-investigator/badge.png) |
 | `social-discovery/badge.png` | 社会のひみつ | 社会科を楽しむ・発見 | 人々、地域、歴史、社会の仕組みのおもしろさを発見した | 調べたことから新しい気づきや問いを見つけた | ![social-discovery](assets/badges/social/social-discovery/badge.png) |
+
+
+## ELEMENT COLLECTION / エレメントコレクション
+
+発見し、集め、育てるための進化型エレメントコレクションです。各属性は、同じエレメントの核を保ちながら **Level 1: FOUND → Level 2: EVOLVE → Level 3: AWAKEN** と成長します。画像内部には属性名・レベル名・文字・数字を入れていません。
+
+すべて透明512×512 PNGです。安定した公開URLは次の形式で利用できます。
+
+`https://tt-sensei.github.io/edu-assets/assets/elements/<element>/level-<level>/badge.png`
+
+| Element | Level 1 / FOUND | Level 2 / EVOLVE | Level 3 / AWAKEN |
+|---|---|---|---|
+| FIRE / 炎 | ![FIRE Lv.1](assets/elements/fire/level-1/badge.png) | ![FIRE Lv.2](assets/elements/fire/level-2/badge.png) | ![FIRE Lv.3](assets/elements/fire/level-3/badge.png) |
+| WATER / 水 | ![WATER Lv.1](assets/elements/water/level-1/badge.png) | ![WATER Lv.2](assets/elements/water/level-2/badge.png) | ![WATER Lv.3](assets/elements/water/level-3/badge.png) |
+| NATURE / 自然 | ![NATURE Lv.1](assets/elements/nature/level-1/badge.png) | ![NATURE Lv.2](assets/elements/nature/level-2/badge.png) | ![NATURE Lv.3](assets/elements/nature/level-3/badge.png) |
+| THUNDER / 雷 | ![THUNDER Lv.1](assets/elements/thunder/level-1/badge.png) | ![THUNDER Lv.2](assets/elements/thunder/level-2/badge.png) | ![THUNDER Lv.3](assets/elements/thunder/level-3/badge.png) |
+| ICE / 氷 | ![ICE Lv.1](assets/elements/ice/level-1/badge.png) | ![ICE Lv.2](assets/elements/ice/level-2/badge.png) | ![ICE Lv.3](assets/elements/ice/level-3/badge.png) |
+
+### 進化デザインルール
+
+- Level 1は中央核を一つに絞った発見段階。
+- Level 2は同じ核を残して、サイズ・動き・粒子・エネルギーを増やす。
+- Level 3は同じ核を残して、オーラ・飛沫・火花・結晶・光線などの属性演出を最大化する。
+- 既存バッジシリーズと同じ円形エナメルピン、太い黒アウトライン、高彩度、ポップな陰影、強いシルエットを基準にする。
+- 追加属性も同じフォルダー構成と進化ルールで拡張する。
+

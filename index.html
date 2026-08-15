@@ -50,6 +50,23 @@
         ['science-measure','測定マスター','測定','温度、時間、長さ、重さなどを測って調べた'],['science-record','記録名人','記録','観察や実験の結果を正確に記録した'],['compare-results','くらべて発見','比較','結果を比べ、共通点や違いを見つけた'],['evidence','結果から考える','考察','観察・実験の結果を根拠に考えた'],['life-science','生命のひみつ','生命・生物','植物、動物、人の体など生命の仕組みを学んだ'],
         ['earth-science','地球のひみつ','地球・天気・宇宙','天気、土地、流水、地球、月や太陽について学んだ'],['matter','もののひみつ','物質','物の性質、溶け方、状態変化を調べた'],['energy','エネルギー発見','物理・エネルギー','電気、磁石、力、光、音などの現象を調べた'],['science-connection','しくみがつながった！','関係・因果','自然の関係や仕組みを見つけた'],['science-discovery','科学のひみつ','理科を楽しむ・発見','自然や科学の面白さを発見した']
       ];
+    subjectBadges.social = [
+      ['map-reader','地図マスター','地図','地図から位置や広がり、場所の特徴を読み取った'],
+      ['local-explorer','まち探検','地域','身近な地域やまちの様子について調べた'],
+      ['source-reader','資料読み取り','資料活用','地図、グラフ、写真、表などの資料から情報を見つけた'],
+      ['compare-society','くらべて発見','比較','地域、時代、暮らしなどを比べ、共通点や違いを見つけた'],
+      ['timeline','時の流れ','時間・歴史','出来事を時間の順序でとらえた'],
+      ['history-connection','歴史がつながった！','歴史的因果・関連','歴史上の出来事同士の関係や変化を見つけた'],
+      ['people-of-history','人物探究','歴史人物','歴史上の人物が何を考え、何をしたのか調べた'],
+      ['life-and-culture','くらし発見','生活・文化','地域や時代による人々の暮らしや文化について学んだ'],
+      ['industry','産業マスター','産業','農業、水産業、工業、流通など、人々の仕事や産業の仕組みを学んだ'],
+      ['society-connection','社会はつながる','社会のつながり','人、物、情報、地域などが互いにつながって社会をつくっていることに気づいた'],
+      ['government','政治のしくみ','政治・行政','政治や行政がどのような仕組みで社会を支えているか考えた'],
+      ['citizens','みんなの社会','市民・公共','社会はさまざまな立場の人々によって成り立っていることを考えた'],
+      ['world-connection','世界とつながる','国際理解','日本と世界の国々とのつながりを学んだ'],
+      ['social-investigator','社会科探偵','調査・探究','複数の資料や情報を集め、自分で社会の疑問を調べた'],
+      ['social-discovery','社会のひみつ','社会科を楽しむ・発見','人々、地域、歴史、社会の仕組みのおもしろさを発見した']
+    ];
     const elementInfo = {
       cosmos:['COSMOS','宇宙'], earth:['EARTH','大地'], fire:['FIRE','炎'], gravity:['GRAVITY','重力'],
       ice:['ICE','氷'], light:['LIGHT','光'], moon:['MOON','月'], nature:['NATURE','自然'],
@@ -60,7 +77,7 @@
     const elementBadges = Object.entries(elementInfo).flatMap(([slug,[label,japanese]])=>elementStages.map(([level,stage,meaning])=>[
       `${slug}/${level}`,`${label} ${level.replace('level-','Lv.')} ${stage}`,`${japanese}・${stage}`,`${japanese}のエレメントを${meaning}`
     ]));
-    const collections={common:{label:'共通',root:'assets/badges/common/',badges:commonBadges},japanese:{label:'国語',root:'assets/badges/japanese/',badges:subjectBadges.japanese},math:{label:'算数',root:'assets/badges/math/',badges:subjectBadges.math},science:{label:'理科',root:'assets/badges/science/',badges:subjectBadges.science},elements:{label:'エレメント',root:'assets/elements/',badges:elementBadges}};
+    const collections={common:{label:'共通',root:'assets/badges/common/',badges:commonBadges},japanese:{label:'国語',root:'assets/badges/japanese/',badges:subjectBadges.japanese},math:{label:'算数',root:'assets/badges/math/',badges:subjectBadges.math},science:{label:'理科',root:'assets/badges/science/',badges:subjectBadges.science},social:{label:'社会',root:'assets/badges/social/',badges:subjectBadges.social},elements:{label:'エレメント',root:'assets/elements/',badges:elementBadges}};
     let collection='common', category='すべて', badges=collections[collection].badges, root=collections[collection].root;
     const collectionsEl=document.querySelector('#collections');
     const filters=document.querySelector('#filters'), grid=document.querySelector('#grid'), search=document.querySelector('#search'), summary=document.querySelector('#summary');

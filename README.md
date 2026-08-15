@@ -186,6 +186,7 @@ GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で45�
 | NATURE / 自然 | ![NATURE Lv.1](assets/elements/nature/level-1/badge.png) | ![NATURE Lv.2](assets/elements/nature/level-2/badge.png) | ![NATURE Lv.3](assets/elements/nature/level-3/badge.png) |
 | THUNDER / 雷 | ![THUNDER Lv.1](assets/elements/thunder/level-1/badge.png) | ![THUNDER Lv.2](assets/elements/thunder/level-2/badge.png) | ![THUNDER Lv.3](assets/elements/thunder/level-3/badge.png) |
 | ICE / 氷 | ![ICE Lv.1](assets/elements/ice/level-1/badge.png) | ![ICE Lv.2](assets/elements/ice/level-2/badge.png) | ![ICE Lv.3](assets/elements/ice/level-3/badge.png) |
+| SHADOW / 影 | ![SHADOW Lv.1](assets/elements/shadow/level-1/badge.png) | ![SHADOW Lv.2](assets/elements/shadow/level-2/badge.png) | ![SHADOW Lv.3](assets/elements/shadow/level-3/badge.png) |
 
 ### 進化デザインルール
 

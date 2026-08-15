@@ -50,7 +50,12 @@
         ['science-measure','測定マスター','測定','温度、時間、長さ、重さなどを測って調べた'],['science-record','記録名人','記録','観察や実験の結果を正確に記録した'],['compare-results','くらべて発見','比較','結果を比べ、共通点や違いを見つけた'],['evidence','結果から考える','考察','観察・実験の結果を根拠に考えた'],['life-science','生命のひみつ','生命・生物','植物、動物、人の体など生命の仕組みを学んだ'],
         ['earth-science','地球のひみつ','地球・天気・宇宙','天気、土地、流水、地球、月や太陽について学んだ'],['matter','もののひみつ','物質','物の性質、溶け方、状態変化を調べた'],['energy','エネルギー発見','物理・エネルギー','電気、磁石、力、光、音などの現象を調べた'],['science-connection','しくみがつながった！','関係・因果','自然の関係や仕組みを見つけた'],['science-discovery','科学のひみつ','理科を楽しむ・発見','自然や科学の面白さを発見した']
       ];
-    const collections={common:{label:'共通',root:'assets/badges/common/',badges:commonBadges},japanese:{label:'国語',root:'assets/badges/japanese/',badges:subjectBadges.japanese},math:{label:'算数',root:'assets/badges/math/',badges:subjectBadges.math},science:{label:'理科',root:'assets/badges/science/',badges:subjectBadges.science}};
+    const elementBadges = [
+      ['shadow/level-1','SHADOW Lv.1 SHADE','影・FOUND','謎めいた影のエレメントを発見した'],
+      ['shadow/level-2','SHADOW Lv.2 PHANTOM','影・EVOLVE','影のエレメントがファントムへ進化した'],
+      ['shadow/level-3','SHADOW Lv.3 ECLIPSE SHADE','影・AWAKEN','影のエレメントがエクリプス・シェードへ覚醒した']
+    ];
+    const collections={common:{label:'共通',root:'assets/badges/common/',badges:commonBadges},japanese:{label:'国語',root:'assets/badges/japanese/',badges:subjectBadges.japanese},math:{label:'算数',root:'assets/badges/math/',badges:subjectBadges.math},science:{label:'理科',root:'assets/badges/science/',badges:subjectBadges.science},elements:{label:'エレメント',root:'assets/elements/',badges:elementBadges}};
     let collection='common', category='すべて', badges=collections[collection].badges, root=collections[collection].root;
     const collectionsEl=document.querySelector('#collections');
     const filters=document.querySelector('#filters'), grid=document.querySelector('#grid'), search=document.querySelector('#search'), summary=document.querySelector('#summary');

@@ -83,13 +83,49 @@
       slug,label,japanese,elementStages.map(([level,stage,meaning])=>({level,stage,meaning,src:`assets/elements/${slug}/${level}/badge.png`}))
     ]);
     const collections={common:{label:'共通',root:'assets/badges/common/',badges:commonBadges},japanese:{label:'国語',root:'assets/badges/japanese/',badges:subjectBadges.japanese},math:{label:'算数',root:'assets/badges/math/',badges:subjectBadges.math},science:{label:'理科',root:'assets/badges/science/',badges:subjectBadges.science},social:{label:'社会',root:'assets/badges/social/',badges:subjectBadges.social},elements:{label:'エレメント',root:'assets/elements/',badges:elementGroups}};
+    const collectionRankLabels={common:'COMMON',rare:'RARE','super-rare':'SUPER RARE',secret:'SECRET'};
+    const collectionRankMeanings={common:'基本コレクション',rare:'レアコレクション','super-rare':'特別なコレクション',secret:'ひみつのコレクション'};
+    function prettyCollectionName(slug){return slug.split('-').map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join(' ')}
+    async function loadDynamicCollections(){
+      try{
+        const apiRoot='https://api.github.com/repos/TT-sensei/edu-assets/contents/';
+        const getDirs=async path=>{
+          const response=await fetch(apiRoot+path+'?ref=main');
+          if(!response.ok) throw new Error('GitHub API request failed');
+          const items=await response.json();
+          return items.filter(item=>item.type==='dir');
+        };
+        const seriesDirs=await getDirs('assets/collections');
+        for(const series of seriesDirs){
+          const records=[];
+          const rankDirs=await getDirs(series.path);
+          for(const rank of rankDirs){
+            const badgeDirs=await getDirs(rank.path);
+            for(const badge of badgeDirs){
+              const slug=badge.path.replace('assets/collections/','');
+              const rankLabel=collectionRankLabels[rank.name]||rank.name.toUpperCase();
+              records.push([slug,badge.name,rank.name,`${prettyCollectionName(series.name)} · ${rankLabel}`]);
+            }
+          }
+          if(records.length){
+            collections[`collection:${series.name}`]={label:`コレクション｜${prettyCollectionName(series.name)}`,root:'assets/collections/',badges:records};
+          }
+        }
+        renderCollections();
+        renderFilters();
+        render();
+      }catch(error){
+        console.warn('コレクションの読み込みに失敗しました',error);
+      }
+    }
+
     let collection='common', category='すべて', badges=collections[collection].badges, root=collections[collection].root;
     const collectionsEl=document.querySelector('#collections');
     const filters=document.querySelector('#filters'), grid=document.querySelector('#grid'), search=document.querySelector('#search'), summary=document.querySelector('#summary');
     const selectAll=document.querySelector('#selectAll'), downloadSelected=document.querySelector('#downloadSelected'), selectedCount=document.querySelector('#selectedCount'), downloadStatus=document.querySelector('#downloadStatus');
     const selected=new Map();
     function renderCollections(){collectionsEl.innerHTML=Object.entries(collections).map(([key,value])=>`<button class="collection" type="button" aria-pressed="${key===collection}" data-collection="${key}">${value.label} <small>(${value.badges.length})</small></button>`).join('')}
-    function renderFilters(){const categories=collection==='elements'?['すべて','level-1','level-2','level-3']:['すべて',...new Set(badges.map(x=>x[2]))];const labels=collection==='elements'?{'すべて':'全レベル','level-1':'Lv.1だけ','level-2':'Lv.2だけ','level-3':'Lv.3だけ'}:{};filters.innerHTML=categories.map(x=>`<button class="filter" type="button" aria-pressed="${x===category}" data-category="${x}">${labels[x]||x}</button>`).join('')}
+    function renderFilters(){const categories=collection==='elements'?['すべて','level-1','level-2','level-3']:['すべて',...new Set(badges.map(x=>x[2]))];const labels=collection==='elements'?{'すべて':'全レベル','level-1':'Lv.1だけ','level-2':'Lv.2だけ','level-3':'Lv.3だけ'}:collection.startsWith('collection:')?{'すべて':'全ランク',common:'COMMON',rare:'RARE','super-rare':'SUPER RARE',secret:'SECRET'}:{};filters.innerHTML=categories.map(x=>`<button class="filter" type="button" aria-pressed="${x===category}" data-category="${x}">${labels[x]||x}</button>`).join('')}
     function switchCollection(next){collection=next;badges=collections[next].badges;root=collections[next].root;category='すべて';renderCollections();renderFilters();render()}
     function getVisibleList(){const q=search.value.trim().toLowerCase();return badges.filter(([slug,name,cat,meaning])=>(category==='すべて'||cat===category)&&(!q||[slug,name,cat,meaning].join(' ').toLowerCase().includes(q)))}
     function selectionKey(slug){return `${collection}:${slug}`}
@@ -116,7 +152,7 @@
     grid.addEventListener('change',e=>{const input=e.target.closest('[data-select]');if(!input)return;const key=input.dataset.select;const slug=key.split(':').slice(1).join(':');if(collection==='elements'){const group=badges.find(([candidate])=>candidate===slug);if(input.checked)selected.set(key,{group:true,levels:group[3].map(level=>({src:level.src,filename:`badge-elements-${slug}-${level.level}.png`}))});else selected.delete(key)}else{if(input.checked)selected.set(key,{src:`${root}${slug}/badge.png`,filename:`badge-${collection}-${slug.replaceAll('/','-')}.png`});else selected.delete(key)};render()})
     selectAll.addEventListener('change',()=>{const list=getVisibleList();list.forEach(([slug,,,levels])=>{const key=selectionKey(slug);if(selectAll.checked){if(collection==='elements')selected.set(key,{group:true,levels:levels.map(level=>({src:level.src,filename:`badge-elements-${slug}-${level.level}.png`}))});else{const src=`${root}${slug}/badge.png`;selected.set(key,{src,filename:`badge-${collection}-${slug.replaceAll('/','-')}.png`})}}else selected.delete(key)});render()})
     downloadSelected.addEventListener('click',async()=>{if(!selected.size)return;downloadSelected.disabled=true;const files=[...selected.values()].flatMap(item=>item.group?item.levels:[item]);downloadStatus.textContent=`${files.length}枚を準備しています…`;let completed=0;for(const item of files){try{const response=await fetch(item.src);if(!response.ok)throw new Error('download failed');const blob=await response.blob();const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=item.filename;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);completed++;await new Promise(resolve=>setTimeout(resolve,180))}catch{downloadStatus.textContent='一部の画像をダウンロードできませんでした。個別の「画像を開く」から保存してください。';break}}if(completed===files.length)downloadStatus.textContent=`${completed}枚のダウンロードを開始しました。ブラウザの許可を確認してください。`;syncSelectionUI()})
-    collectionsEl.addEventListener('click',e=>{const b=e.target.closest('[data-collection]');if(b)switchCollection(b.dataset.collection)});filters.addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;category=b.dataset.category;document.querySelectorAll('.filter').forEach(x=>x.setAttribute('aria-pressed',x===b));render()});search.addEventListener('input',render);renderCollections();renderFilters();render();
+    collectionsEl.addEventListener('click',e=>{const b=e.target.closest('[data-collection]');if(b)switchCollection(b.dataset.collection)});filters.addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;category=b.dataset.category;document.querySelectorAll('.filter').forEach(x=>x.setAttribute('aria-pressed',x===b));render()});search.addEventListener('input',render);renderCollections();renderFilters();render();loadDynamicCollections();
   </script>
 </body>
 </html>

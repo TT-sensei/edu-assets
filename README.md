@@ -197,3 +197,19 @@ GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で45�
 - 既存バッジシリーズと同じ円形エナメルピン、太い黒アウトライン、高彩度、ポップな陰影、強いシルエットを基準にする。
 - 追加属性も同じフォルダー構成と進化ルールで拡張する。
 
+
+
+## SWEETS / スイーツ
+
+スタイリッシュなスイーツを、COMMON・RARE・SUPER RARE・SECRETの4段階で集めるコレクションバッジです。すべて512×512 PNGで、画像内に文字や数字は入れていません。
+
+| Rarity | Badge | Preview |
+|---|---|---|
+| COMMON | ドーナツ、カップケーキ、プリン、クッキー、アイスクリーム、マカロン、キャンディ、ショートケーキ | ![donut](assets/badges/sweets/common/donut/badge.png) |
+| RARE | クレープ、パフェ、チョコレートバー、ワッフル | ![crepe](assets/badges/sweets/rare/crepe/badge.png) |
+| SUPER RARE | レインボーサンデー、クラウンケーキ | ![rainbow-sundae](assets/badges/sweets/super-rare/rainbow-sundae/badge.png) |
+| SECRET | ドリームデザート | ![dream-dessert](assets/badges/sweets/secret/dream-dessert/badge.png) |
+
+公開URLは次の形式です。
+
+`https://tt-sensei.github.io/edu-assets/assets/badges/sweets/<rarity>/<slug>/badge.png`

@@ -82,7 +82,7 @@
     const elementGroups = Object.entries(elementInfo).map(([slug,[label,japanese]])=>[
       slug,label,japanese,elementStages.map(([level,stage,meaning])=>({level,stage,meaning,src:`assets/elements/${slug}/${level}/badge.png`}))
     ]);
-    const collections={common:{label:'共通',root:'assets/badges/common/',badges:commonBadges},japanese:{label:'国語',root:'assets/badges/japanese/',badges:subjectBadges.japanese},math:{label:'算数',root:'assets/badges/math/',badges:subjectBadges.math},science:{label:'理科',root:'assets/badges/science/',badges:subjectBadges.science},social:{label:'社会',root:'assets/badges/social/',badges:subjectBadges.social},elements:{label:'エレメント',root:'assets/elements/',badges:elementGroups}};
+    const collections={common:{label:'共通',root:'assets/badges/common/',badges:commonBadges},japanese:{label:'国語',root:'assets/badges/japanese/',badges:subjectBadges.japanese},math:{label:'算数',root:'assets/badges/math/',badges:subjectBadges.math},science:{label:'理科',root:'assets/badges/science/',badges:subjectBadges.science},social:{label:'社会',root:'assets/badges/social/',badges:subjectBadges.social},elements:{label:'エレメント',root:'assets/elements/',badges:elementGroups},collections:{label:'コレクション',root:'assets/collections/',badges:[]}};
     const collectionRankLabels={common:'COMMON',rare:'RARE','super-rare':'SUPER RARE',secret:'SECRET'};
     const collectionRankMeanings={common:'基本コレクション',rare:'レアコレクション','super-rare':'特別なコレクション',secret:'ひみつのコレクション'};
     function prettyCollectionName(slug){return slug.split('-').map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join(' ')}
@@ -104,11 +104,11 @@
             for(const badge of badgeDirs){
               const slug=badge.path.replace('assets/collections/','');
               const rankLabel=collectionRankLabels[rank.name]||rank.name.toUpperCase();
-              records.push([slug,badge.name,rank.name,`${prettyCollectionName(series.name)} · ${rankLabel}`]);
+              records.push([slug,badge.name,series.name,`${rankLabel}｜${prettyCollectionName(series.name)}`]);
             }
           }
           if(records.length){
-            collections[`collection:${series.name}`]={label:`コレクション｜${prettyCollectionName(series.name)}`,root:'assets/collections/',badges:records};
+            collections.collections.badges.push(...records);
           }
         }
         renderCollections();
@@ -125,9 +125,9 @@
     const selectAll=document.querySelector('#selectAll'), downloadSelected=document.querySelector('#downloadSelected'), selectedCount=document.querySelector('#selectedCount'), downloadStatus=document.querySelector('#downloadStatus');
     const selected=new Map();
     function renderCollections(){collectionsEl.innerHTML=Object.entries(collections).map(([key,value])=>`<button class="collection" type="button" aria-pressed="${key===collection}" data-collection="${key}">${value.label} <small>(${value.badges.length})</small></button>`).join('')}
-    function renderFilters(){const categories=collection==='elements'?['すべて','level-1','level-2','level-3']:['すべて',...new Set(badges.map(x=>x[2]))];const labels=collection==='elements'?{'すべて':'全レベル','level-1':'Lv.1だけ','level-2':'Lv.2だけ','level-3':'Lv.3だけ'}:collection.startsWith('collection:')?{'すべて':'全ランク',common:'COMMON',rare:'RARE','super-rare':'SUPER RARE',secret:'SECRET'}:{};filters.innerHTML=categories.map(x=>`<button class="filter" type="button" aria-pressed="${x===category}" data-category="${x}">${labels[x]||x}</button>`).join('')}
+    function renderFilters(){const categories=collection==='elements'?['すべて',...badges.map(x=>x[0])]:['すべて',...new Set(badges.map(x=>x[2]))];const labels=collection==='elements'?Object.fromEntries([['すべて','全属性'],...badges.map(x=>[x[0],`${x[1]}／${x[2]}`])]):collection==='collections'?Object.fromEntries([['すべて','全シリーズ'],...categories.filter(x=>x!=='すべて').map(x=>[x,prettyCollectionName(x)])]):{};filters.innerHTML=categories.map(x=>`<button class="filter" type="button" aria-pressed="${x===category}" data-category="${x}">${labels[x]||x}</button>`).join('')}
     function switchCollection(next){collection=next;badges=collections[next].badges;root=collections[next].root;category='すべて';renderCollections();renderFilters();render()}
-    function getVisibleList(){const q=search.value.trim().toLowerCase();return badges.filter(([slug,name,cat,meaning])=>(category==='すべて'||cat===category)&&(!q||[slug,name,cat,meaning].join(' ').toLowerCase().includes(q)))}
+    function getVisibleList(){const q=search.value.trim().toLowerCase();return badges.filter(([slug,name,cat,meaning])=>(category==='すべて'||(collection==='elements'?slug===category:cat===category))&&(!q||[slug,name,cat,meaning].join(' ').toLowerCase().includes(q)))}
     function selectionKey(slug){return `${collection}:${slug}`}
     function syncSelectionUI(list=getVisibleList()){const count=selected.size;selectedCount.textContent=`(${count})`;downloadSelected.disabled=count===0;const visibleKeys=list.map(([slug])=>selectionKey(slug));const checked=visibleKeys.length>0&&visibleKeys.every(key=>selected.has(key));selectAll.checked=checked;selectAll.indeterminate=!checked&&visibleKeys.some(key=>selected.has(key))}
     function render(){
@@ -136,7 +136,7 @@
         summary.textContent=`${list.length} / ${badges.length} 属性`;
         grid.innerHTML=list.length?list.map(([slug,label,japanese,levels])=>{
           const key=selectionKey(slug),checked=selected.has(key);
-          const visibleLevels=category==='すべて'?levels:levels.filter(level=>level.level===category);
+          const visibleLevels=levels;
           return `<article class="card element-card${checked?' is-selected':''}">
             <label class="select-toggle"><input type="checkbox" data-select="${key}" ${checked?'checked':''}> この属性を選択</label>
             <h2 class="name">${label} <small>／${japanese}</small></h2>

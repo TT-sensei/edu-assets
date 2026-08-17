@@ -3,8 +3,7 @@
 小学生向けWeb教材で共通利用する画像アセット集です。
 
 ## Badge catalog
-
-GitHub Pagesを有効にすると、[Common Badgesの一覧サイト](./)で45種類のバッジをカテゴリー別に確認できます。検索、画像プレビュー、画像URLのコピーにも対応しています。
+(https://tt-sensei.github.io/edu-assets/)でバッジをカテゴリー別に確認できます。検索、画像プレビュー、画像URLのコピーにも対応しています。
 
 ## Common Badges
 

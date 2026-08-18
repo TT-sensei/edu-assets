@@ -9,7 +9,7 @@
 - エレメント：`assets/elements/<属性>/level-1|level-2|level-3/badge.png`
 - コレクション：`assets/collections/<シリーズ>/common|rare|super-rare|secret/<項目>/badge.png`
 
-`assets/collections/`には、現在`animal`、`dinosaur`、`fantasy`、`fruit`、`gem`、`sea-animal`、`space`があります。
+`assets/collections/`には、現在`animal`、`dinosaur`、`fantasy`、`fruit`、`gem`、`insect`、`sea-animal`、`space`があります。
 
 ## 基本的な使い方
 
@@ -34,4 +34,3 @@ Badge Labで使用する画像を開き、「URLをコピー」で取得した�
 | edu-assets | バッジ・エレメント・コレクション画像 | [Repository](https://github.com/TT-sensei/edu-assets) | [Catalog](https://tt-sensei.github.io/edu-assets/) |
 
 AIで教材を作成する場合の`BadgeManager`、獲得イベント、CSS演出、サウンドとの連携は、[edu-componentsのAI-GUIDE](https://github.com/TT-sensei/edu-components/blob/main/AI-GUIDE.md)を参照してください。
-

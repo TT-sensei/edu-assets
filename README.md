@@ -9,7 +9,7 @@
 - エレメント：`assets/elements/<属性>/level-1|level-2|level-3/badge.png`
 - コレクション：`assets/collections/<シリーズ>/common|rare|super-rare|secret/<項目>/badge.png`
 
-`assets/collections/`には、現在`animal`、`dinosaur`、`fantasy`、`fruit`、`gem`、`insect`、`sea-animal`、`space`があります。
+`assets/collections/`には、現在`animal`、`dinosaur`、`fantasy`、`flower`、`fruit`、`gem`、`insect`、`music`、`sea-animal`、`space`、`treasure`があります。
 
 ## 基本的な使い方
 

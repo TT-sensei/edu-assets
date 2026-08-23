@@ -13,7 +13,26 @@
 
 ## 基本的な使い方
 
-Badge Labで使用する画像を開き、「URLをコピー」で取得した実在URLを教材から参照します。
+教材サイトで表示する場合は、原則として `assets/web/` の WebP を参照します。元画像と同じ相対パスを保った軽量版なので、対応関係を迷いません。
+
+```html
+<img
+  src="https://tt-sensei.github.io/edu-assets/assets/web/badges/common/clear/badge.webp"
+  alt="クリアバッジ"
+>
+```
+
+Badge Labで使用する画像を開き、「URLをコピー」で取得した実在URLを教材から参照できます。Web版がまだ用意されていない画像は、元画像へフォールバックできます。
+
+### マスター素材とWeb版
+
+- `assets/badges/`、`assets/elements/`、`assets/collections/`：編集・再加工・高解像度出力に使うマスター素材。削除・上書きしない。
+- `assets/web/`：教材サイト表示用の軽量WebP。元画像と同じ構造・ファイル名で対応する。
+- 教材サイト：原則 `assets/web/.../*.webp` を使用する。
+- Web版が存在しない場合のみ、対応する元画像へフォールバックする。
+- 新しい教材を作るAIは、元の大容量PNGを直接読み込まず、まず `assets/web/` に対応ファイルがあるか確認する。
+
+Web版は既存画像を再生成したものではなく、元画像を縮小・Web配信用にエンコードした表示用コピーです。透明背景は維持しています。
 
 ```html
 <img

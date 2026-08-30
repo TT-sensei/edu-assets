@@ -53,3 +53,15 @@ Web版は既存画像を再生成したものではなく、元画像を縮小�
 | edu-assets | バッジ・エレメント・コレクション画像 | [Repository](https://github.com/TT-sensei/edu-assets) | [Catalog](https://tt-sensei.github.io/edu-assets/) |
 
 AIで教材を作成する場合の`BadgeManager`、獲得イベント、CSS演出、サウンドとの連携は、[edu-componentsのAI-GUIDE](https://github.com/TT-sensei/edu-components/blob/main/AI-GUIDE.md)を参照してください。
+
+## License
+
+このリポジトリのTT-senseiオリジナルの画像・イラスト素材は、CC BY-NC 4.0の条件で提供します。
+
+学校・家庭での非営利利用、授業での利用、非営利目的での改変は可能です。商用利用、素材そのものの販売、素材集としての再配布は許可していません。
+
+詳しい条件は [LICENSE](LICENSE) を確認してください。
+
+第三者が権利を持つ素材には、この条件は適用されません。個別のファイルやディレクトリに別途ライセンス表示がある場合は、その表示を優先してください。
+
+Copyright © 2026 TT-sensei.
